@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firebase App  </title>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+     <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBVIOSzTMjbgA_TMpGz60YNxVXhh1udBGQ",
+    authDomain: "my-cool-project-6ed4d.firebaseapp.com",
+    databaseURL: "https://my-cool-project-6ed4d.firebaseio.com",
+    projectId: "my-cool-project-6ed4d",
+    storageBucket: "my-cool-project-6ed4d.appspot.com",
+    messagingSenderId: "127317602093",
+    appId: "1:127317602093:web:9c7cbdf9f2d41530496da4"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+<script src="app.js" defer></script> 
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"
+integrity="sha512-/seDHxVfh1NvFUscAj8GsHQVZJvr2jjAoYsNL7As2FCaFHUHYIarl3sRCvVlFgyouVNiRgHIebyLKjpgd1SLDw=="
+crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <h1>My Awesome App 🔥 </h1>
+
+  
+  <section id="whenSignedOut">
+    <button id="signInBtn" class="btn btn-primary">Sign in with Google</button>
+  </section>
+
+  <section id="whenSignedIn" hidden="true">
+
+    <div id="userDetails"></div>
+
+    <button id="signOutBtn" class="btn btn-primary">Sign out</button>
+
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>My Firestore Things</h2>
+
+    <ul id="thingslist"></ul>
+
+    <button id="createThing" class="btn btn-success">Create Random Thing</button>
+  </section>
+  
+</body>
+</html>
